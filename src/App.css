@@ -1,0 +1,236 @@
+/* Dashboard Layout */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles - Glassmorphic */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #1a202c;
+  padding: 0.85rem 2rem;
+  min-height: 76px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 3.1rem;
+  width: auto;
+  display: block;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo-image:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #2d3748;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+  position: relative;
+  top: 6px;
+}
+
+.logo-text p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.header-badge {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-badge:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #4a5568;
+}
+
+/* Main Content */
+.dashboard-main {
+  flex: 1;
+  background: #CBEEF3;
+  padding: 2rem 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: calc(100vh - 200px);
+}
+
+/* Charts Grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.charts-grid-small {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.charts-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stacked-chart-section {
+  margin-bottom: 1.5rem;
+}
+
+.table-section {
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.dashboard-footer {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98) 0%, rgba(22, 33, 62, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 2rem 2rem;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-footer p {
+  margin: 0.25rem 0;
+  font-size: 0.8125rem;
+}
+
+.footer-note {
+  font-size: 0.75rem !important;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .charts-grid-small {
+    grid-template-columns: 1fr;
+  }
+  
+  .charts-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-logo {
+    flex-direction: column;
+  }
+
+  .logo-image {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .logo-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-text h1 {
+    font-size: 1.25rem;
+  }
+  
+  .dashboard-main {
+    padding: 1rem;
+  }
+  
+  .charts-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text h1 {
+    font-size: 1rem;
+  }
+  
+  .logo-text p {
+    font-size: 0.75rem;
+  }
+}
