@@ -72,13 +72,29 @@ const CategoryDonutChart = ({ data }) => {
     const { payload } = props;
     const total = data.reduce((sum, item) => sum + Number(item.value || 0), 0);
 
+    // Create array of legend items with their percentages
+    const legendItems = payload.map((entry) => {
+      const dataItem = data.find(d => d.name === entry.value);
+      const value = Number(dataItem?.value || 0);
+      const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : '0.0';
+      
+      return {
+        entry,
+        value,
+        percentage: parseFloat(percentage)
+      };
+    });
+
+    // Sort by percentage in descending order
+    legendItems.sort((a, b) => b.percentage - a.percentage);
+
     return (
       <ul className="custom-legend">
-        {payload.map((entry, index) => (
+        {legendItems.map((item, index) => (
           <li key={`legend-${index}`} className="legend-item">
-            <span className="legend-color" style={{ backgroundColor: entry.color }} />
+            <span className="legend-color" style={{ backgroundColor: item.entry.color }} />
             <span className="legend-text">
-              {entry.value}: {total > 0 ? ((Number(data[index]?.value || 0) / total) * 100).toFixed(1) : '0.0'}%
+              {item.entry.value}: {item.percentage.toFixed(1)}%
             </span>
           </li>
         ))}
