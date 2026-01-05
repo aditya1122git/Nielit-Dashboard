@@ -22,7 +22,10 @@ const COLORS = {
 const StackedBarChart = ({ data, selectedCentre = 'All', height = 400, fullWidth = true, barSize = 32 }) => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
-      const total = payload.reduce((sum, p) => sum + Number(p.value || 0), 0);
+      // Only sum SC, ST, and EWS (not Female, as Female is already part of the total)
+      const total = payload
+        .filter(p => ['SC', 'ST', 'EWS'].includes(p.dataKey))
+        .reduce((sum, p) => sum + Number(p.value || 0), 0);
       return (
         <div className="custom-tooltip stacked-tooltip">
           <p className="tooltip-label">{String(label ?? '').replace('NIELIT ', '')}</p>
