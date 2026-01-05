@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
-import { enrollmentData, getUniqueCentres, getUniqueCourses, getUniqueCategories, getUniqueStates, getUniqueStatuses } from './data/enrollmentData';
+import { enrollmentData, getUniqueCentres, getUniqueCategories, getUniqueStates, getUniqueStatuses } from './data/enrollmentData';
 import { 
   filterData, 
+  canonicalCourseName,
   getSummaryStats, 
   aggregateByCentre, 
   aggregateByDistrict,
@@ -17,7 +18,7 @@ import './App.css';
 
 function App() {
   const [filters, setFilters] = useState({
-    status: 'All',
+    status: 'Certified',
     centre: 'All',
     state: 'All',
     district: 'All',
@@ -29,12 +30,25 @@ function App() {
   const centres = useMemo(() => getUniqueCentres(), []);
   const states = useMemo(() => getUniqueStates(), []);
   const statuses = useMemo(() => getUniqueStatuses(), []);
-  const courses = useMemo(() => getUniqueCourses(), []);
   const categories = useMemo(() => getUniqueCategories(), []);
+
+  // Normalize course names (merge duplicates; keep full names)
+  const normalizedEnrollmentData = useMemo(() => {
+    return enrollmentData.map((row) => ({
+      ...row,
+      course: canonicalCourseName(row.course),
+    }));
+  }, []);
+
+  const courses = useMemo(() => {
+    return [...new Set(normalizedEnrollmentData.map((d) => d.course))]
+      .filter((c) => c && c !== '__ALL_COURSES__')
+      .sort();
+  }, [normalizedEnrollmentData]);
 
   // Get districts based on current state and centre selection
   const districts = useMemo(() => {
-    let relevantData = enrollmentData;
+    let relevantData = normalizedEnrollmentData;
 
     // Filter by status if selected
     if (filters.status && filters.status !== 'All') {
@@ -52,7 +66,7 @@ function App() {
     }
     
     return [...new Set(relevantData.map(d => d.district))].sort();
-  }, [filters.status, filters.state, filters.centre]);
+  }, [filters.status, filters.state, filters.centre, normalizedEnrollmentData]);
 
   // Auto-reset district when it's no longer available in the filtered list
   useEffect(() => {
@@ -63,8 +77,18 @@ function App() {
 
   // Filter data based on selected filters
   const filteredData = useMemo(() => {
-    return filterData(enrollmentData, filters);
+    return filterData(normalizedEnrollmentData, filters);
   }, [filters]);
+
+  const matchesBaseFilters = (row) => {
+    const statusMatch = !filters.status || filters.status === 'All' || row.status === filters.status;
+    const centreMatch = !filters.centre || filters.centre === 'All' || row.centre === filters.centre;
+    const stateMatch = !filters.state || filters.state === 'All' || row.state === filters.state;
+    const districtMatch = !filters.district || filters.district === 'All' || row.district === filters.district;
+    const isFemaleRow = String(row.category ?? '').toLowerCase() === 'female';
+    const courseMatch = isFemaleRow || !filters.course || filters.course === 'All' || row.course === filters.course;
+    return statusMatch && centreMatch && stateMatch && districtMatch && courseMatch;
+  };
 
   // Calculate summary statistics
   const stats = useMemo(() => {
@@ -75,8 +99,44 @@ function App() {
   const centreData = useMemo(() => aggregateByCentre(filteredData), [filteredData]);
   const districtData = useMemo(() => aggregateByDistrict(filteredData), [filteredData]);
   const courseData = useMemo(() => aggregateByCourse(filteredData), [filteredData]);
-  const categoryData = useMemo(() => aggregateByCategory(filteredData), [filteredData]);
-  const stackedData = useMemo(() => aggregateForStackedChart(filteredData), [filteredData]);
+  const categoryData = useMemo(() => {
+    if (String(filters.category ?? '').toLowerCase() === 'female') {
+      const femaleCount = normalizedEnrollmentData
+        .filter((d) => matchesBaseFilters(d) && String(d.category ?? '').toLowerCase() === 'female')
+        .reduce((sum, d) => sum + Number(d.student_count || 0), 0);
+
+      const totalCount = normalizedEnrollmentData
+        .filter((d) => matchesBaseFilters(d) && String(d.category ?? '').toLowerCase() !== 'female')
+        .reduce((sum, d) => sum + Number(d.student_count || 0), 0);
+
+      const maleCount = Math.max(0, totalCount - femaleCount);
+
+      return [
+        { name: 'Female', value: femaleCount },
+        { name: 'Male', value: maleCount },
+      ].filter((x) => Number(x.value || 0) > 0);
+    }
+
+    return aggregateByCategory(filteredData);
+  }, [filteredData, filters.category, filters.status, filters.centre, filters.state, filters.district, filters.course, normalizedEnrollmentData]);
+
+  const stackedData = useMemo(() => {
+    const stackedFiltered = normalizedEnrollmentData.filter((d) => {
+      if (!matchesBaseFilters(d)) return false;
+
+      const cat = String(d.category ?? '');
+      const catLower = cat.toLowerCase();
+      const filterCatLower = String(filters.category ?? '').toLowerCase();
+
+      if (!filters.category || filters.category === 'All') {
+        return ['gen', 'sc', 'st', 'ews', 'female'].includes(catLower);
+      }
+
+      return catLower === filterCatLower;
+    });
+
+    return aggregateForStackedChart(stackedFiltered);
+  }, [filters.category, filters.status, filters.centre, filters.state, filters.district, filters.course, normalizedEnrollmentData]);
 
   return (
     <div className="dashboard">
@@ -94,9 +154,6 @@ function App() {
 
       {/* Main Content */}
       <main className="dashboard-main">
-        {/* Summary Cards */}
-        <SummaryCards stats={stats} />
-
         {/* Filter Panel */}
         <FilterPanel
           filters={filters}
@@ -109,16 +166,23 @@ function App() {
           categories={categories}
         />
 
+        {/* Summary Cards */}
+        <SummaryCards stats={stats} />
+
         {/* Charts Grid - Row 1 */}
         <div className="charts-grid">
           <CentreBarChart data={centreData} />
+          <CategoryDonutChart data={categoryData} />
+        </div>
+
+        {/* District-wise Enrollment (Full Width) */}
+        <div className="stacked-chart-section">
           <DistrictBarChart data={districtData} />
         </div>
 
-        {/* Charts Grid - Row 2 */}
-        <div className="charts-grid-small">
-          <StackedBarChart data={stackedData} selectedCentre={filters.centre} fullWidth={false} height={280} barSize={48} />
-          <CategoryDonutChart data={categoryData} />
+        {/* Category Distribution by Centre (Full Width) */}
+        <div className="stacked-chart-section">
+          <StackedBarChart data={stackedData} selectedCentre={filters.centre} fullWidth={true} height={280} barSize={48} />
         </div>
 
         {/* Course-wise Enrollment (Full Width) */}

@@ -10,9 +10,11 @@ import './Charts.css';
 
 const COLORS = {
   GEN: '#4361ee',
-  SC: '#f59e0b',
-  ST: '#ec4899',
-  EWS: '#8b5cf6'
+  SC: '#10b981',
+  ST: '#f59e0b',
+  EWS: '#8b5cf6',
+  Female: '#f72585',
+  Male: '#3a0ca3'
 };
 
 const CategoryDonutChart = ({ data }) => {

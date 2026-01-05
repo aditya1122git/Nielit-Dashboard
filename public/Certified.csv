@@ -1,0 +1,49 @@
+State,District,Centre,Category,Course,SC,ST,EWS,Total,Female
+Odisha,Balasore,NIELIT Bhubaneswar,Certified,__ALL_COURSES__,0,0,0,0,32
+Odisha,Balasore,NIELIT Bhubaneswar,Certified,Certified Computer Application Accounting and Publishing Assistant,29,0,0,29,0
+Odisha,Balasore,NIELIT Bhubaneswar,Certified,Certified Web Developer,17,4,0,21,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Certified,__ALL_COURSES__,0,0,0,0,101
+Odisha,Ganjam,NIELIT Bhubaneswar,Certified,Certified Data Entry and Office Assistant (Upskilling),37,18,5,60,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Certified,Certified Web Developer,22,5,3,30,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Certified,Foundation course in Internet of Things (IoT),20,7,0,27,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Certified,Product Assembly Assistant (Solar-LED),26,4,0,30,0
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Certified,__ALL_COURSES__,0,0,0,0,25
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Certified,Certified Computer Application Accounting and Publishing Assistant,27,0,0,27,0
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Certified,Certified Data Entry and Office Assistant (Upskilling),24,1,1,26,0
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,__ALL_COURSES__,0,0,0,0,54
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,Certified Data Entry and Office Assistant (Upskilling),9,41,1,51,0
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,Certified Web Developer,15,15,0,30,0
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,Foundation course in Internet of Things (IoT),1,5,0,6,0
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,Foundation course in Machine Learning using Python,2,0,1,3,0
+Odisha,Khordha,NIELIT Bhubaneswar,Certified,O Level (IT),25,29,0,54,0
+Odisha,Naupada,NIELIT Bhubaneswar,Certified,__ALL_COURSES__,0,0,0,0,31
+Odisha,Naupada,NIELIT Bhubaneswar,Certified,Certified Data Entry and Office Assistant (Upskilling),17,12,0,29,0
+Odisha,Naupada,NIELIT Bhubaneswar,Certified,Certified Web Developer,5,16,0,21,0
+West Bengal,Birbhum,NIELIT Kolkata,Certified,__ALL_COURSES__,0,0,0,0,67
+West Bengal,Birbhum,NIELIT Kolkata,Certified,Certified Computer Application Accounting and Publishing Assistant,22,2,6,30,0
+West Bengal,Birbhum,NIELIT Kolkata,Certified,Certified Data Entry and Office Assistant (Upskilling),33,3,12,48,0
+West Bengal,Howrah,NIELIT Kolkata,Certified,__ALL_COURSES__,0,0,0,0,134
+West Bengal,Howrah,NIELIT Kolkata,Certified,Certified Computer Application Accounting and Publishing Assistant,84,0,3,87,0
+West Bengal,Howrah,NIELIT Kolkata,Certified,Certified Data Entry and Office Assistant (Upskilling),97,0,52,149,0
+West Bengal,Howrah,NIELIT Kolkata,Certified,Certified Web Developer,13,0,0,13,0
+West Bengal,Purulia,NIELIT Kolkata,Certified,__ALL_COURSES__,0,0,0,0,29
+West Bengal,Purulia,NIELIT Kolkata,Certified,Certified Data Entry and Office Assistant (Upskilling),21,5,11,37,0
+West Bengal,Purulia,NIELIT Kolkata,Certified,Foundation course in Information Security,41,7,36,84,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Certified,__ALL_COURSES__,0,0,0,0,17
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Certified,Certified Computer Application Accounting and Publishing Assistant,20,5,5,30,0
+Bihar,Gaya,NIELIT Patna,Certified,__ALL_COURSES__,0,0,0,0,68
+Bihar,Gaya,NIELIT Patna,Certified,Certified Computer Application Accounting and Publishing Assistant,35,0,11,46,0
+Bihar,Gaya,NIELIT Patna,Certified,Certified Data Entry and Office Assistant (Upskilling),61,0,12,73,0
+Bihar,Gaya,NIELIT Patna,Certified,Certified Web Developer,42,0,11,53,0
+Bihar,Lakhisarai,NIELIT Patna,Certified,__ALL_COURSES__,0,0,0,0,33
+Bihar,Lakhisarai,NIELIT Patna,Certified,Certified Computer Application Accounting and Publishing Assistant,56,0,13,69,0
+Bihar,Lakhisarai,NIELIT Patna,Certified,Certified Data Entry and Office Assistant (Upskilling),44,0,10,54,0
+Bihar,Purnea,NIELIT Patna,Certified,__ALL_COURSES__,0,0,0,0,108
+Bihar,Purnea,NIELIT Patna,Certified,Certified Computer Application Accounting and Publishing Assistant,55,0,14,69,0
+Bihar,Purnea,NIELIT Patna,Certified,Certified Data Entry and Office Assistant (Upskilling),72,0,18,90,0
+Bihar,Rohtas,NIELIT Patna,Certified,__ALL_COURSES__,0,0,0,0,96
+Bihar,Rohtas,NIELIT Patna,Certified,Certified Computer Application Accounting and Publishing Assistant,83,2,13,98,0
+Bihar,Rohtas,NIELIT Patna,Certified,Certified Data Entry and Office Assistant (Upskilling),78,2,10,90,0
+Jharkhand,Simdega,NIELIT Ranchi,Certified,__ALL_COURSES__,0,0,0,0,24
+Jharkhand,Simdega,NIELIT Ranchi,Certified,Certified Computer Application Accounting and Publishing Assistant,0,27,0,27,0
+Jharkhand,Simdega,NIELIT Ranchi,Certified,Certified Data Entry and Office Assistant (Upskilling),0,23,0,23,0

@@ -22,7 +22,6 @@ const FilterPanel = ({ filters, onFilterChange, centres, states, districts, cour
             value={filters.status}
             onChange={(e) => handleChange('status', e.target.value)}
           >
-            <option value="All">All Status</option>
             {statuses.map((status) => (
               <option key={status} value={status}>
                 {status}
@@ -113,7 +112,7 @@ const FilterPanel = ({ filters, onFilterChange, centres, states, districts, cour
 
         <button
           className="reset-btn"
-          onClick={() => onFilterChange({ status: 'All', centre: 'All', state: 'All', district: 'All', course: 'All', category: 'All' })}
+          onClick={() => onFilterChange({ status: 'Certified', centre: 'All', state: 'All', district: 'All', course: 'All', category: 'All' })}
         >
           Reset Filters
         </button>

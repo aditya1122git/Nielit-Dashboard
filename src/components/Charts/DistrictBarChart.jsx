@@ -29,7 +29,7 @@ const DistrictBarChart = ({ data }) => {
   if (!data || data.length === 0) {
     return (
       <div className="chart-container">
-        <h3 className="chart-title"><i className="fa-solid fa-location-dot" aria-hidden="true" /> District-wise Student Count (Top 10)</h3>
+        <h3 className="chart-title"><i className="fa-solid fa-location-dot" aria-hidden="true" /> District-wise Student Count</h3>
         <div className="chart-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '350px' }}>
           <p style={{ color: '#9ca3af', fontSize: '14px' }}>No data available for the selected filters</p>
         </div>
@@ -37,16 +37,15 @@ const DistrictBarChart = ({ data }) => {
     );
   }
 
-  // Take top 10 districts for better visualization
-  const topDistricts = data.slice(0, 10);
+  const chartHeight = 400;
 
   return (
     <div className="chart-container">
-      <h3 className="chart-title"><i className="fa-solid fa-location-dot" aria-hidden="true" /> District-wise Student Count (Top {Math.min(data.length, 10)})</h3>
+      <h3 className="chart-title"><i className="fa-solid fa-location-dot" aria-hidden="true" /> District-wise Student Count</h3>
       <div className="chart-wrapper">
-        <ResponsiveContainer width="100%" height={350}>
+        <ResponsiveContainer width="100%" height={chartHeight}>
           <BarChart
-            data={topDistricts}
+            data={data}
             margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -55,15 +54,15 @@ const DistrictBarChart = ({ data }) => {
               angle={-45}
               textAnchor="end"
               interval={0}
-              tick={{ fontSize: 11, fill: '#6b7280' }}
+              tick={{ fontSize: 10, fill: '#6b7280' }}
             />
             <YAxis
               tick={{ fontSize: 11, fill: '#6b7280' }}
-              tickFormatter={(value) => value.toLocaleString()}
+              tickFormatter={(value) => Number(value || 0).toLocaleString()}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="students" radius={[4, 4, 0, 0]} maxBarSize={80}>
-              {topDistricts.map((entry, index) => (
+            <Bar dataKey="students" radius={[4, 4, 0, 0]} maxBarSize={40}>
+              {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Bar>

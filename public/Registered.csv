@@ -1,321 +1,109 @@
 State,District,Centre,Category,Course,SC,ST,EWS,Total,Female
-Odisha,Khordha,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,O Level,45,45,0,90,45
-Odisha,Khordha,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,IoT,2,14,0,16,2
-Odisha,Khordha,Bhubaneswar,Registered,CCAAPA,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,Data Entry,12,48,1,61,12
-Odisha,Khordha,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,Product Assembly Assistant,21,8,1,30,21
-Odisha,Khordha,Bhubaneswar,Registered,O Level,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,Machine Learning,18,9,3,30,18
-Odisha,Khordha,Bhubaneswar,Registered,IoT,9,19,1,29,9
-Odisha,Khordha,Bhubaneswar,Registered,CCAAPA,20,0,2,22,20
-Odisha,Khordha,Bhubaneswar,Registered,Web Developer,23,37,0,60,23
-Odisha,Khordha,Bhubaneswar,Registered,Data Entry,0,0,0,0,0
-Odisha,Khordha,Bhubaneswar,Registered,Info Security,26,31,3,60,26
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,O Level,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,CCAAPA,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Data Entry,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,O Level,29,0,1,30,29
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,CCAAPA,59,0,1,60,59
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Data Entry,54,4,2,60,54
-Odisha,Jagatsinghpur,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,O Level,20,9,1,30,20
-Odisha,Balasore,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,IoT,14,13,3,30,14
-Odisha,Balasore,Bhubaneswar,Registered,CCAAPA,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,Data Entry,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,O Level,53,3,4,60,53
-Odisha,Balasore,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Balasore,Bhubaneswar,Registered,CCAAPA,46,13,1,60,46
-Odisha,Balasore,Bhubaneswar,Registered,Web Developer,20,4,1,25,20
-Odisha,Balasore,Bhubaneswar,Registered,Data Entry,24,6,0,30,24
-Odisha,Balasore,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,O Level,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,CCAAPA,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,Data Entry,13,13,4,30,13
-Odisha,Ganjam,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,Product Assembly Assistant,72,18,0,90,72
-Odisha,Ganjam,Bhubaneswar,Registered,O Level,44,35,11,90,44
-Odisha,Ganjam,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Ganjam,Bhubaneswar,Registered,IoT,21,7,2,30,21
-Odisha,Ganjam,Bhubaneswar,Registered,CCAAPA,76,44,0,120,76
-Odisha,Ganjam,Bhubaneswar,Registered,Web Developer,22,5,3,30,22
-Odisha,Ganjam,Bhubaneswar,Registered,Data Entry,123,41,12,176,123
-Odisha,Ganjam,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,O Level,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,CCAAPA,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Web Developer,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Data Entry,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,Product Assembly Assistant,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,O Level,15,15,0,30,15
-Odisha,Naupada,Bhubaneswar,Registered,Machine Learning,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,IoT,0,0,0,0,0
-Odisha,Naupada,Bhubaneswar,Registered,CCAAPA,19,11,0,30,19
-Odisha,Naupada,Bhubaneswar,Registered,Web Developer,7,23,0,30,7
-Odisha,Naupada,Bhubaneswar,Registered,Data Entry,17,13,0,30,17
-Odisha,Naupada,Bhubaneswar,Registered,Info Security,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Product Assembly Assistant,6,10,5,21,6
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,CCAAPA,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Data Entry,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Product Assembly Assistant,1,29,0,30,1
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Machine Learning,5,0,0,5,5
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,CCAAPA,9,51,0,60,9
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Data Entry,17,43,0,60,17
-Jharkhand,Seraikela Kharsawan,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Product Assembly Assistant,7,9,1,17,7
-Jharkhand,Simdega,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Machine Learning,25,0,0,25,0
-Jharkhand,Simdega,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,CCAAPA,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Data Entry,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Product Assembly Assistant,9,51,0,60,9
-Jharkhand,Simdega,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,IoT,3,7,0,10,3
-Jharkhand,Simdega,Ranchi,Registered,CCAAPA,9,111,0,120,9
-Jharkhand,Simdega,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Simdega,Ranchi,Registered,Data Entry,6,114,0,120,6
-Jharkhand,Simdega,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Product Assembly Assistant,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,CCAAPA,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Data Entry,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Product Assembly Assistant,40,20,0,60,40
-Jharkhand,Deoghar,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,CCAAPA,51,9,0,60,51
-Jharkhand,Deoghar,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Deoghar,Ranchi,Registered,Data Entry,53,7,0,60,53
-Jharkhand,Deoghar,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Product Assembly Assistant,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,CCAAPA,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Data Entry,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Product Assembly Assistant,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,CCAAPA,56,4,0,60,56
-Jharkhand,Koderma,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Koderma,Ranchi,Registered,Data Entry,73,5,0,78,73
-Jharkhand,Koderma,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Product Assembly Assistant,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,CCAAPA,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Data Entry,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Info Security,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Product Assembly Assistant,35,25,0,60,35
-Jharkhand,Chatra,Ranchi,Registered,O Level,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Machine Learning,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,IoT,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,CCAAPA,75,45,0,120,75
-Jharkhand,Chatra,Ranchi,Registered,Web Developer,0,0,0,0,0
-Jharkhand,Chatra,Ranchi,Registered,Data Entry,72,47,1,120,72
-Jharkhand,Chatra,Ranchi,Registered,Info Security,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Product Assembly Assistant,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Machine Learning,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,CCAAPA,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Data Entry,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Info Security,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Product Assembly Assistant,149,7,34,190,149
-West Bengal,Birbhum,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Machine Learning,20,0,0,20,20
-West Bengal,Birbhum,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,CCAAPA,121,14,11,146,121
-West Bengal,Birbhum,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Birbhum,Kolkata,Registered,Data Entry,283,35,87,405,283
-West Bengal,Birbhum,Kolkata,Registered,Info Security,20,0,0,20,20
-West Bengal,Purulia,Kolkata,Registered,Product Assembly Assistant,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Machine Learning,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,CCAAPA,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Data Entry,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Info Security,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Product Assembly Assistant,124,21,30,175,124
-West Bengal,Purulia,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Machine Learning,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,CCAAPA,53,50,66,169,53
-West Bengal,Purulia,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Purulia,Kolkata,Registered,Data Entry,160,94,52,306,160
-West Bengal,Purulia,Kolkata,Registered,Info Security,83,8,44,135,83
-West Bengal,Howrah,Kolkata,Registered,Product Assembly Assistant,0,0,0,0,0
-West Bengal,Howrah,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Howrah,Kolkata,Registered,Machine Learning,25,0,0,25,25
-West Bengal,Howrah,Kolkata,Registered,IoT,16,0,9,25,16
-West Bengal,Howrah,Kolkata,Registered,CCAAPA,0,0,0,0,0
-West Bengal,Howrah,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Howrah,Kolkata,Registered,Data Entry,0,0,0,0,0
-West Bengal,Howrah,Kolkata,Registered,Info Security,15,0,0,15,15
-West Bengal,Howrah,Kolkata,Registered,Product Assembly Assistant,20,0,169,189,20
-West Bengal,Howrah,Kolkata,Registered,O Level,29,1,0,30,29
-West Bengal,Howrah,Kolkata,Registered,Machine Learning,55,0,11,66,55
-West Bengal,Howrah,Kolkata,Registered,IoT,15,1,0,16,15
-West Bengal,Howrah,Kolkata,Registered,CCAAPA,156,0,23,179,156
-West Bengal,Howrah,Kolkata,Registered,Web Developer,38,0,6,44,38
-West Bengal,Howrah,Kolkata,Registered,Data Entry,202,22,93,317,202
-West Bengal,Howrah,Kolkata,Registered,Info Security,42,0,0,42,42
-West Bengal,Maldah,Kolkata,Registered,Product Assembly Assistant,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Machine Learning,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,CCAAPA,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Data Entry,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Info Security,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Product Assembly Assistant,34,0,0,34,34
-West Bengal,Maldah,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Machine Learning,60,0,0,60,60
-West Bengal,Maldah,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,CCAAPA,133,9,0,142,133
-West Bengal,Maldah,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Maldah,Kolkata,Registered,Data Entry,200,5,0,205,200
-West Bengal,Maldah,Kolkata,Registered,Info Security,35,0,0,35,35
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Product Assembly Assistant,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Machine Learning,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,CCAAPA,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Data Entry,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Info Security,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Product Assembly Assistant,95,16,18,129,95
-West Bengal,Uttar Dinajpur,Kolkata,Registered,O Level,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Machine Learning,10,0,0,10,10
-West Bengal,Uttar Dinajpur,Kolkata,Registered,IoT,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,CCAAPA,137,32,41,210,137
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Web Developer,0,0,0,0,0
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Data Entry,90,14,0,104,90
-West Bengal,Uttar Dinajpur,Kolkata,Registered,Info Security,57,0,0,57,57
-Bihar,Gaya,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,CCAAPA,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Web Developer,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Data Entry,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Gaya,Patna,Registered,CCAAPA,112,0,19,131,112
-Bihar,Gaya,Patna,Registered,Web Developer,70,1,17,88,70
-Bihar,Gaya,Patna,Registered,Data Entry,197,1,78,276,197
-Bihar,Gaya,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,CCAAPA,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Web Developer,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Data Entry,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Product Assembly Assistant,68,12,10,90,68
-Bihar,Rohtas,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Rohtas,Patna,Registered,CCAAPA,124,1,22,147,124
-Bihar,Rohtas,Patna,Registered,Web Developer,24,0,6,30,24
-Bihar,Rohtas,Patna,Registered,Data Entry,106,1,20,127,106
-Bihar,Rohtas,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,CCAAPA,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Web Developer,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Data Entry,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Product Assembly Assistant,40,10,10,60,40
-Bihar,Lakhisarai,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Lakhisarai,Patna,Registered,CCAAPA,150,0,49,199,150
-Bihar,Lakhisarai,Patna,Registered,Web Developer,24,0,6,30,24
-Bihar,Lakhisarai,Patna,Registered,Data Entry,134,0,59,193,134
-Bihar,Lakhisarai,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,CCAAPA,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Web Developer,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Data Entry,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Product Assembly Assistant,200,10,10,220,200
-Bihar,Motihari,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Motihari,Patna,Registered,CCAAPA,42,0,18,60,42
-Bihar,Motihari,Patna,Registered,Web Developer,42,0,18,60,42
-Bihar,Motihari,Patna,Registered,Data Entry,42,0,18,60,42
-Bihar,Motihari,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,CCAAPA,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Web Developer,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Data Entry,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Info Security,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Product Assembly Assistant,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,O Level,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,Machine Learning,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,IoT,0,0,0,0,0
-Bihar,Purnea,Patna,Registered,CCAAPA,76,0,23,99,76
-Bihar,Purnea,Patna,Registered,Web Developer,42,0,18,60,42
-Bihar,Purnea,Patna,Registered,Data Entry,93,0,27,120,93
-Bihar,Purnea,Patna,Registered,Info Security,0,0,0,0,0
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,76
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,46,13,1,60,0
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),24,6,0,30,0
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Web Developer,20,4,1,25,0
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Things (IoT),14,13,3,30,0
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,O Level (IT),73,12,5,90,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,311
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,76,44,0,120,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),136,54,16,206,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Web Developer,22,5,3,30,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Things (IoT),21,7,2,30,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,O Level (IT),44,35,11,90,0
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Product Assembly Assistant (Solar-LED),72,18,0,90,0
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,73
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,59,0,1,60,0
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),54,4,2,60,0
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,O Level (IT),29,0,1,30,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,181
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,20,0,2,22,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),12,48,1,61,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Web Developer,23,37,0,60,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Foundation course in Information Security,26,31,3,60,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Things (IoT),11,33,1,45,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Foundation course in Machine Learning using Python,18,9,3,30,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,O Level (IT),45,45,0,90,0
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,Product Assembly Assistant (Solar-LED),21,8,1,30,0
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,70
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,19,11,0,30,0
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),17,13,0,30,0
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Web Developer,7,23,0,30,0
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,O Level (IT),15,15,0,30,0
+West Bengal,Birbhum,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,227
+West Bengal,Birbhum,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,121,14,11,146,0
+West Bengal,Birbhum,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),283,35,87,405,0
+West Bengal,Birbhum,NIELIT Kolkata,Registered,Foundation course in Information Security,20,0,0,20,0
+West Bengal,Birbhum,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,20,0,0,20,0
+West Bengal,Birbhum,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),149,7,34,190,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,366
+West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,156,0,23,179,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),202,22,93,317,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Web Developer,38,0,6,44,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Foundation course in Information Security,57,0,0,57,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Foundation course in Internet of Things (IoT),31,1,9,41,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,80,0,11,91,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,O Level (IT),29,1,0,30,0
+West Bengal,Howrah,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),20,0,169,189,0
+West Bengal,Maldah,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,118
+West Bengal,Maldah,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,133,9,0,142,0
+West Bengal,Maldah,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),200,5,0,205,0
+West Bengal,Maldah,NIELIT Kolkata,Registered,Foundation course in Information Security,35,0,0,35,0
+West Bengal,Maldah,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,60,0,0,60,0
+West Bengal,Maldah,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),34,0,0,34,0
+West Bengal,Purulia,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,368
+West Bengal,Purulia,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,53,50,66,169,0
+West Bengal,Purulia,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),160,94,52,306,0
+West Bengal,Purulia,NIELIT Kolkata,Registered,Foundation course in Information Security,83,8,44,135,0
+West Bengal,Purulia,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),124,21,30,175,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,259
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,137,32,41,210,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),90,14,0,104,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Foundation course in Information Security,57,0,0,57,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,10,0,0,10,0
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),95,16,18,129,0
+Bihar,Gaya,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,196
+Bihar,Gaya,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,112,0,19,131,0
+Bihar,Gaya,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),197,1,78,276,0
+Bihar,Gaya,NIELIT Patna,Registered,Certified Web Developer,70,1,17,88,0
+Bihar,Lakhisarai,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,207
+Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,150,0,49,199,0
+Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),134,0,59,193,0
+Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Web Developer,24,0,6,30,0
+Bihar,Lakhisarai,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),40,10,10,60,0
+Bihar,Motihari,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,118
+Bihar,Motihari,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,42,0,18,60,0
+Bihar,Motihari,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),42,0,18,60,0
+Bihar,Motihari,NIELIT Patna,Registered,Certified Web Developer,42,0,18,60,0
+Bihar,Motihari,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),200,10,10,220,0
+Bihar,Purnea,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,166
+Bihar,Purnea,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,76,0,23,99,0
+Bihar,Purnea,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),93,0,27,120,0
+Bihar,Purnea,NIELIT Patna,Registered,Certified Web Developer,42,0,18,60,0
+Bihar,Rohtas,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,185
+Bihar,Rohtas,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,124,1,22,147,0
+Bihar,Rohtas,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),106,1,20,127,0
+Bihar,Rohtas,NIELIT Patna,Registered,Certified Web Developer,24,0,6,30,0
+Bihar,Rohtas,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),68,12,10,90,0
+Jharkhand,Chatra,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,144
+Jharkhand,Chatra,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,75,45,0,120,0
+Jharkhand,Chatra,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),72,47,1,120,0
+Jharkhand,Chatra,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),35,25,0,60,0
+Jharkhand,Deoghar,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,78
+Jharkhand,Deoghar,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,51,9,0,60,0
+Jharkhand,Deoghar,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),53,7,0,60,0
+Jharkhand,Deoghar,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),40,20,0,60,0
+Jharkhand,Koderma,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,32
+Jharkhand,Koderma,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,56,4,0,60,0
+Jharkhand,Koderma,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),73,5,0,78,0
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,101
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,9,51,0,60,0
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),17,43,0,60,0
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Foundation course in Machine Learning using Python,5,0,0,5,0
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),7,39,5,51,0
+Jharkhand,Simdega,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,210
+Jharkhand,Simdega,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,9,111,0,120,0
+Jharkhand,Simdega,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),6,114,0,120,0
+Jharkhand,Simdega,NIELIT Ranchi,Registered,Foundation course in Internet of Things (IoT),3,7,0,10,0
+Jharkhand,Simdega,NIELIT Ranchi,Registered,Foundation course in Machine Learning using Python,25,0,0,25,0
+Jharkhand,Simdega,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),16,60,1,77,0

@@ -17,8 +17,12 @@ const __dirname = dirname(__filename);
 // Excel fallback file (only loaded if CSVs are not available)
 const excelFilePath = join(__dirname, 'public', 'SDUY MPR November 2025  revised 09-12-2025.xlsx');
 
-// Only these 3 phases are used in the dashboard
-const phasesToProcess = ['Registered', 'Undergoing', 'Trained'];
+// Phases used in the dashboard (CSV files expected in /public as <Phase>.csv)
+const phasesToProcess = ['Registered', 'Undergoing', 'Trained', 'Certified'];
+
+// When phases are provided as an Excel sheet, Female is an overall field (not per-course).
+// We represent it as a dedicated Female-only row using a sentinel course.
+const FEMALE_COURSE_SENTINEL = '__ALL_COURSES__';
 
 const toInt = (value) => {
   if (value === null || value === undefined) return 0;
@@ -38,7 +42,195 @@ const normalizeText = (value) => {
   return text;
 };
 
+const canonicalCentreName = (value) => {
+  const centre = normalizeText(value);
+  if (!centre) return '';
+
+  // User-facing convention: show these centres with NIELIT prefix.
+  // Also fixes common spelling variant.
+  const stripped = centre.replace(/^NIELIT\s+/i, '').trim();
+  const lower = stripped.toLowerCase();
+  const map = new Map([
+    ['bhubaneswar', 'Bhubaneswar'],
+    ['bubhaneswar', 'Bhubaneswar'],
+    ['ranchi', 'Ranchi'],
+    ['kolkata', 'Kolkata'],
+    ['patna', 'Patna'],
+  ]);
+
+  const base = map.get(lower);
+  if (!base) return centre;
+  return `NIELIT ${base}`;
+};
+
 const isPhaseValue = (value) => phasesToProcess.includes(normalizeText(value));
+
+const parsePhaseXlsxRows = (xlsxPath) => {
+  const workbook = readFile(xlsxPath, { cellDates: false });
+  const sheetName = workbook.SheetNames?.[0];
+  if (!sheetName) return [];
+  const sheet = workbook.Sheets[sheetName];
+  if (!sheet) return [];
+
+  const rows = utils.sheet_to_json(sheet, { header: 1, raw: false, defval: '' });
+  if (!Array.isArray(rows) || rows.length < 3) return [];
+
+  const headerRow = rows[0].map((v) => normalizeText(v));
+  const subHeaderRow = rows[1].map((v) => normalizeText(v));
+
+  const findCol = (regex) => headerRow.findIndex((v) => regex.test(v));
+  const centreCol = findCol(/centre/i);
+  const stateCol = findCol(/^state$/i);
+  const districtCol = findCol(/^district$/i);
+  const trainingOrgCol = findCol(/training/i);
+  const femaleCol = findCol(/^female$/i);
+
+  if (centreCol < 0 || stateCol < 0 || districtCol < 0 || femaleCol < 0) return [];
+
+  const courseBlocks = [];
+  for (let col = femaleCol + 1; col < subHeaderRow.length; col++) {
+    const sub = subHeaderRow[col];
+    const courseName = headerRow[col];
+    if (!courseName) continue;
+
+    // Expect SC/ST/EWS/Total blocks for each course
+    if (!/^sc$/i.test(sub)) continue;
+    const st = normalizeText(subHeaderRow[col + 1]);
+    const ews = normalizeText(subHeaderRow[col + 2]);
+    const total = normalizeText(subHeaderRow[col + 3]);
+    if (!/^st$/i.test(st) || !/^ews$/i.test(ews) || !/^total$/i.test(total)) continue;
+
+    courseBlocks.push({
+      name: courseName,
+      startCol: col,
+    });
+    col += 3;
+  }
+
+  const resultRows = [];
+  let currentCentre = '';
+  let currentState = '';
+  let currentDistrict = '';
+
+  for (let i = 2; i < rows.length; i++) {
+    const row = rows[i];
+    if (!Array.isArray(row)) continue;
+
+    const centreCell = normalizeText(row[centreCol]);
+    if (centreCell) currentCentre = centreCell;
+    const stateCell = normalizeText(row[stateCol]);
+    if (stateCell) currentState = stateCell;
+    const districtCell = normalizeText(row[districtCol]);
+    if (districtCell) currentDistrict = districtCell;
+    const trainingOrgCell = trainingOrgCol >= 0 ? normalizeText(row[trainingOrgCol]) : '';
+
+    if (!currentCentre || !currentState || !currentDistrict) continue;
+
+    // Skip subtotal rows
+    if (normalizeText(trainingOrgCell).toLowerCase() === 'total') continue;
+    if (normalizeText(currentDistrict).toLowerCase() === 'total') continue;
+
+    const femaleCount = toInt(row[femaleCol]);
+    if (femaleCount > 0) {
+      resultRows.push({
+        State: currentState,
+        District: currentDistrict,
+        Centre: currentCentre,
+        TrainingOrg: trainingOrgCell,
+        Course: FEMALE_COURSE_SENTINEL,
+        SC: 0,
+        ST: 0,
+        EWS: 0,
+        Total: 0,
+        Female: femaleCount,
+      });
+    }
+
+    for (const block of courseBlocks) {
+      const sc = toInt(row[block.startCol]);
+      const st = toInt(row[block.startCol + 1]);
+      const ews = toInt(row[block.startCol + 2]);
+      const total = toInt(row[block.startCol + 3]) || Math.max(0, sc + st + ews);
+
+      if (total <= 0 && sc <= 0 && st <= 0 && ews <= 0) continue;
+
+      resultRows.push({
+        State: currentState,
+        District: currentDistrict,
+        Centre: currentCentre,
+        TrainingOrg: trainingOrgCell,
+        Course: block.name,
+        SC: sc,
+        ST: st,
+        EWS: ews,
+        Total: total,
+        Female: 0,
+      });
+    }
+  }
+
+  return resultRows;
+};
+
+const writePhaseCsvFromXlsxRows = (rows, outputPath, phaseCategory) => {
+  const map = new Map();
+
+  for (const row of rows) {
+    const state = normalizeText(row.State);
+    const district = normalizeText(row.District);
+    const centre = canonicalCentreName(row.Centre);
+    const course = normalizeText(row.Course);
+    const sc = toInt(row.SC);
+    const st = toInt(row.ST);
+    const ews = toInt(row.EWS);
+    const total = toInt(row.Total);
+    const female = toInt(row.Female);
+
+    if (!state || !district || !centre || !course) continue;
+    if (sc <= 0 && st <= 0 && ews <= 0 && total <= 0 && female <= 0) continue;
+
+    const key = [state, district, centre, course].join('||');
+    const existing = map.get(key);
+    if (existing) {
+      existing.SC += sc;
+      existing.ST += st;
+      existing.EWS += ews;
+      existing.Total += total;
+      existing.Female += female;
+    } else {
+      map.set(key, {
+        State: state,
+        District: district,
+        Centre: centre,
+        Category: phaseCategory,
+        Course: course,
+        SC: sc,
+        ST: st,
+        EWS: ews,
+        Total: total,
+        Female: female,
+      });
+    }
+  }
+
+  const outRows = Array.from(map.values()).sort((a, b) => {
+    const centreCmp = String(a.Centre).localeCompare(String(b.Centre));
+    if (centreCmp !== 0) return centreCmp;
+    const stateCmp = String(a.State).localeCompare(String(b.State));
+    if (stateCmp !== 0) return stateCmp;
+    const districtCmp = String(a.District).localeCompare(String(b.District));
+    if (districtCmp !== 0) return districtCmp;
+    return String(a.Course).localeCompare(String(b.Course));
+  });
+
+  const csv = Papa.unparse(outRows, {
+    header: true,
+    columns: ['State', 'District', 'Centre', 'Category', 'Course', 'SC', 'ST', 'EWS', 'Total', 'Female'],
+    skipEmptyLines: true,
+  });
+
+  writeFileSync(outputPath, csv, 'utf8');
+};
 
 const tryReadCsvData = () => {
   const csvPaths = phasesToProcess
@@ -48,46 +240,58 @@ const tryReadCsvData = () => {
     })
     .filter(Boolean);
 
-  if (csvPaths.length === 0) {
+  const certifiedXlsxPath = join(__dirname, 'public', 'Certified.xlsx');
+  const hasCertifiedXlsx = existsSync(certifiedXlsxPath);
+
+  const trainedXlsxPath = join(__dirname, 'public', 'Trained.xlsx');
+  const hasTrainedXlsx = existsSync(trainedXlsxPath);
+
+  const registeredXlsxPath = join(__dirname, 'public', 'Registered.xlsx');
+  const hasRegisteredXlsx = existsSync(registeredXlsxPath);
+
+  if (csvPaths.length === 0 && !hasCertifiedXlsx && !hasTrainedXlsx && !hasRegisteredXlsx) {
     return { usedCsv: false, normalizedData: [] };
   }
 
   const normalizedData = [];
-  const missing = phasesToProcess.filter(phase => !csvPaths.some(p => p.phase === phase));
+  const missing = phasesToProcess.filter(phase => {
+    if (phase === 'Certified' && hasCertifiedXlsx) return false;
+    if (phase === 'Trained' && hasTrainedXlsx) return false;
+    if (phase === 'Registered' && hasRegisteredXlsx) return false;
+    return !csvPaths.some(p => p.phase === phase);
+  });
   if (missing.length) {
     console.warn(`CSV not found for: ${missing.join(', ')} (expected in /public as <Phase>.csv)`);
   }
 
-  for (const { phase, path } of csvPaths) {
-    const csvText = readFileSync(path, 'utf8');
-    const parsed = Papa.parse(csvText, {
-      header: true,
-      skipEmptyLines: true,
-      dynamicTyping: false,
-    });
+  // Prefer Certified.xlsx if present (authoritative source)
+  if (hasCertifiedXlsx) {
+    const certifiedRows = parsePhaseXlsxRows(certifiedXlsxPath);
 
-    if (parsed.errors?.length) {
-      console.warn(`CSV parse warnings for ${phase}.csv:`);
-      parsed.errors.slice(0, 5).forEach(e => console.warn(`- ${e.message}`));
+    // Keep Certified.csv in sync for convenience/sharing.
+    try {
+      const certifiedCsvOutPath = join(__dirname, 'public', 'Certified.csv');
+      writePhaseCsvFromXlsxRows(certifiedRows, certifiedCsvOutPath, 'Certified');
+    } catch (e) {
+      console.warn(`Failed to regenerate Certified.csv from Certified.xlsx: ${e?.message || e}`);
     }
 
-    for (const row of parsed.data || []) {
+    for (const row of certifiedRows) {
       const state = normalizeText(row.State ?? row.state);
       const district = normalizeText(row.District ?? row.district);
-      const centre = normalizeText(row.Centre ?? row.centre);
+      const centre = canonicalCentreName(row.Centre ?? row.centre);
       const course = normalizeText(row.Course ?? row.course);
-
-      // Force status from filename to avoid accidental mixing/repeats
-      const status = phase;
+      const status = 'Certified';
 
       const scCount = toInt(row.SC ?? row.sc);
       const stCount = toInt(row.ST ?? row.st);
       const ewsCount = toInt(row.EWS ?? row.ews);
       const totalCount = toInt(row.Total ?? row.total);
+      const femaleCount = toInt(row.Female ?? row.female);
       const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
 
       if (!centre || !state || !district || !course) continue;
-      if (totalCount <= 0) continue;
+      if (totalCount <= 0 && femaleCount <= 0) continue;
 
       const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
 
@@ -139,6 +343,319 @@ const tryReadCsvData = () => {
           student_count: ewsCount,
         });
       }
+      if (femaleCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'Female',
+          status,
+          student_count: femaleCount,
+        });
+      }
+    }
+  }
+
+  // Prefer Trained.xlsx if present (authoritative source)
+  if (hasTrainedXlsx) {
+    const trainedRows = parsePhaseXlsxRows(trainedXlsxPath);
+
+    // Keep Trained.csv in sync for convenience/sharing.
+    try {
+      const trainedCsvOutPath = join(__dirname, 'public', 'Trained.csv');
+      writePhaseCsvFromXlsxRows(trainedRows, trainedCsvOutPath, 'Trained');
+    } catch (e) {
+      console.warn(`Failed to regenerate Trained.csv from Trained.xlsx: ${e?.message || e}`);
+    }
+
+    for (const row of trainedRows) {
+      const state = normalizeText(row.State ?? row.state);
+      const district = normalizeText(row.District ?? row.district);
+      const centre = canonicalCentreName(row.Centre ?? row.centre);
+      const course = normalizeText(row.Course ?? row.course);
+      const status = 'Trained';
+
+      const scCount = toInt(row.SC ?? row.sc);
+      const stCount = toInt(row.ST ?? row.st);
+      const ewsCount = toInt(row.EWS ?? row.ews);
+      const totalCount = toInt(row.Total ?? row.total);
+      const femaleCount = toInt(row.Female ?? row.female);
+      const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
+
+      if (!centre || !state || !district || !course) continue;
+      if (totalCount <= 0 && femaleCount <= 0) continue;
+
+      const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
+
+      if (genCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'GEN',
+          status,
+          student_count: genCount,
+        });
+      }
+      if (scCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'SC',
+          status,
+          student_count: scCount,
+        });
+      }
+      if (stCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'ST',
+          status,
+          student_count: stCount,
+        });
+      }
+      if (ewsCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'EWS',
+          status,
+          student_count: ewsCount,
+        });
+      }
+      if (femaleCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'Female',
+          status,
+          student_count: femaleCount,
+        });
+      }
+    }
+  }
+
+  // Prefer Registered.xlsx if present (authoritative source)
+  if (hasRegisteredXlsx) {
+    const registeredRows = parsePhaseXlsxRows(registeredXlsxPath);
+
+    // Keep Registered.csv in sync for convenience/sharing.
+    try {
+      const registeredCsvOutPath = join(__dirname, 'public', 'Registered.csv');
+      writePhaseCsvFromXlsxRows(registeredRows, registeredCsvOutPath, 'Registered');
+    } catch (e) {
+      console.warn(`Failed to regenerate Registered.csv from Registered.xlsx: ${e?.message || e}`);
+    }
+
+    for (const row of registeredRows) {
+      const state = normalizeText(row.State ?? row.state);
+      const district = normalizeText(row.District ?? row.district);
+      const centre = canonicalCentreName(row.Centre ?? row.centre);
+      const course = normalizeText(row.Course ?? row.course);
+      const status = 'Registered';
+
+      const scCount = toInt(row.SC ?? row.sc);
+      const stCount = toInt(row.ST ?? row.st);
+      const ewsCount = toInt(row.EWS ?? row.ews);
+      const totalCount = toInt(row.Total ?? row.total);
+      const femaleCount = toInt(row.Female ?? row.female);
+      const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
+
+      if (!centre || !state || !district || !course) continue;
+      if (totalCount <= 0 && femaleCount <= 0) continue;
+
+      const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
+
+      if (genCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'GEN',
+          status,
+          student_count: genCount,
+        });
+      }
+      if (scCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'SC',
+          status,
+          student_count: scCount,
+        });
+      }
+      if (stCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'ST',
+          status,
+          student_count: stCount,
+        });
+      }
+      if (ewsCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'EWS',
+          status,
+          student_count: ewsCount,
+        });
+      }
+      if (femaleCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'Female',
+          status,
+          student_count: femaleCount,
+        });
+      }
+    }
+  }
+
+  for (const { phase, path } of csvPaths) {
+    if (phase === 'Certified' && hasCertifiedXlsx) {
+      // Skip Certified.csv when Certified.xlsx is present.
+      continue;
+    }
+
+    if (phase === 'Trained' && hasTrainedXlsx) {
+      // Skip Trained.csv when Trained.xlsx is present.
+      continue;
+    }
+
+    if (phase === 'Registered' && hasRegisteredXlsx) {
+      // Skip Registered.csv when Registered.xlsx is present.
+      continue;
+    }
+    const csvText = readFileSync(path, 'utf8');
+    const parsed = Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: false,
+    });
+
+    if (parsed.errors?.length) {
+      console.warn(`CSV parse warnings for ${phase}.csv:`);
+      parsed.errors.slice(0, 5).forEach(e => console.warn(`- ${e.message}`));
+    }
+
+    for (const row of parsed.data || []) {
+      const state = normalizeText(row.State ?? row.state);
+      const district = normalizeText(row.District ?? row.district);
+      const centre = canonicalCentreName(row.Centre ?? row.centre);
+      const course = normalizeText(row.Course ?? row.course);
+
+      // Force status from filename to avoid accidental mixing/repeats
+      const status = phase;
+
+      const scCount = toInt(row.SC ?? row.sc);
+      const stCount = toInt(row.ST ?? row.st);
+      const ewsCount = toInt(row.EWS ?? row.ews);
+      const totalCount = toInt(row.Total ?? row.total);
+      const femaleCount = toInt(row.Female ?? row.female);
+      const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
+
+      if (!centre || !state || !district || !course) continue;
+      if (totalCount <= 0 && femaleCount <= 0) continue;
+
+      const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
+
+      if (genCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'GEN',
+          status,
+          student_count: genCount,
+        });
+      }
+      if (scCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'SC',
+          status,
+          student_count: scCount,
+        });
+      }
+      if (stCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'ST',
+          status,
+          student_count: stCount,
+        });
+      }
+      if (ewsCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'EWS',
+          status,
+          student_count: ewsCount,
+        });
+      }
+
+      // Optional: Female count as its own filterable category (orthogonal to GEN/SC/ST/EWS)
+      if (femaleCount > 0) {
+        normalizedData.push({
+          centre,
+          state,
+          district,
+          training_org: trainingOrg,
+          course,
+          category: 'Female',
+          status,
+          student_count: femaleCount,
+        });
+      }
     }
   }
 
@@ -149,12 +666,14 @@ const dedupeAndSum = (rows) => {
   const map = new Map();
 
   for (const raw of rows) {
-    const centre = normalizeText(raw.centre);
+    const centre = canonicalCentreName(raw.centre);
     const state = normalizeText(raw.state);
     const district = normalizeText(raw.district);
     const trainingOrg = normalizeText(raw.training_org ?? raw.trainingOrg ?? 'Total') || 'Total';
     const course = normalizeText(raw.course);
-    const category = normalizeText(raw.category).toUpperCase();
+    const rawCategory = normalizeText(raw.category);
+    const upperCategory = rawCategory.toUpperCase();
+    const category = ['GEN', 'SC', 'ST', 'EWS'].includes(upperCategory) ? upperCategory : rawCategory;
     const status = normalizeText(raw.status);
     const studentCount = toInt(raw.student_count);
 

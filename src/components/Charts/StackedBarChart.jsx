@@ -13,9 +13,10 @@ import './Charts.css';
 
 const COLORS = {
   GEN: '#4361ee',
-  SC: '#f59e0b',
-  ST: '#ec4899',
-  EWS: '#8b5cf6'
+  SC: '#10b981',
+  ST: '#f59e0b',
+  EWS: '#8b5cf6',
+  Female: '#f72585'
 };
 
 const StackedBarChart = ({ data, selectedCentre = 'All', height = 400, fullWidth = true, barSize = 32 }) => {
@@ -59,6 +60,7 @@ const StackedBarChart = ({ data, selectedCentre = 'All', height = 400, fullWidth
       { name: 'SC', students: Number(row.SC || 0) },
       { name: 'ST', students: Number(row.ST || 0) },
       { name: 'EWS', students: Number(row.EWS || 0) },
+      { name: 'Female', students: Number(row.Female || 0) },
     ].filter(d => d.students > 0);
 
     return (
@@ -136,6 +138,7 @@ const StackedBarChart = ({ data, selectedCentre = 'All', height = 400, fullWidth
             <Bar dataKey="SC" stackId="a" fill={COLORS.SC} radius={[0, 0, 0, 0]} barSize={barSize} />
             <Bar dataKey="ST" stackId="a" fill={COLORS.ST} radius={[0, 0, 0, 0]} barSize={barSize} />
             <Bar dataKey="EWS" stackId="a" fill={COLORS.EWS} radius={[4, 4, 0, 0]} barSize={barSize} />
+            <Bar dataKey="Female" stackId="a" fill={COLORS.Female} radius={[4, 4, 0, 0]} barSize={barSize} />
           </BarChart>
         </ResponsiveContainer>
       </div>
