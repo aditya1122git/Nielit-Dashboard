@@ -149,6 +149,10 @@ function App() {
               <h1>NIELIT Student Enrollment Dashboard</h1>
             </div>
           </div>
+          <div className="header-logos-right">
+            <img className="right-logo-image" src="/IndiaAIlogo.svg" alt="India AI" />
+            <img className="right-logo-image" src="/digital-india-logo.jpg" alt="Digital India" />
+          </div>
         </div>
       </header>
 

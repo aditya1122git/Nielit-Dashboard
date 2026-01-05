@@ -61,6 +61,22 @@
   transform: translateY(-50%);
 }
 
+.header-logos-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.right-logo-image {
+  height: 2.6rem;
+  width: auto;
+  display: block;
+}
+
 .logo-image:hover {
   transform: translateY(-50%) scale(1.05);
 }
@@ -199,6 +215,12 @@
   
   .header-logo {
     flex-direction: column;
+  }
+
+  .header-logos-right {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
   }
 
   .logo-image {
