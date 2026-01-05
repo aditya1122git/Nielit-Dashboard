@@ -18,7 +18,7 @@ import './App.css';
 
 function App() {
   const [filters, setFilters] = useState({
-    status: 'Certified',
+    status: 'Registered',
     centre: 'All',
     state: 'All',
     district: 'All',

@@ -6215,4 +6215,14 @@ export const getUniqueCategories = () => [...new Set(enrollmentData.map(d => d.c
 export const getUniqueStates = () => [...new Set(enrollmentData.map(d => d.state))];
 export const getUniqueDistricts = () => [...new Set(enrollmentData.map(d => d.district))];
 export const getUniqueTrainingOrgs = () => [...new Set(enrollmentData.map(d => d.training_org))];
-export const getUniqueStatuses = () => [...new Set(enrollmentData.map(d => d.status))];
+export const getUniqueStatuses = () => {
+  const order = ['Registered', 'Undergoing', 'Trained', 'Certified'];
+  const uniqueStatuses = [...new Set(enrollmentData.map(d => d.status))];
+  return uniqueStatuses.sort((a, b) => {
+    const indexA = order.indexOf(a);
+    const indexB = order.indexOf(b);
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
+  });
+};

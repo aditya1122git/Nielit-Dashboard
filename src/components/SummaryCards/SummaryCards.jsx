@@ -22,12 +22,6 @@ const SummaryCards = ({ stats }) => {
       color: '#f59e0b'
     },
     {
-      title: 'Centres',
-      value: stats.totalCentres,
-      iconClass: 'fa-solid fa-building-columns',
-      color: '#3a0ca3'
-    },
-    {
       title: 'Courses',
       value: stats.totalCourses,
       iconClass: 'fa-solid fa-book',

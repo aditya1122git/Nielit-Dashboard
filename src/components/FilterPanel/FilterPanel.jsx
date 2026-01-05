@@ -47,22 +47,6 @@ const FilterPanel = ({ filters, onFilterChange, centres, states, districts, cour
         </div>
 
         <div className="filter-group">
-          <label htmlFor="centre-filter">Nielit Centre</label>
-          <select
-            id="centre-filter"
-            value={filters.centre}
-            onChange={(e) => handleChange('centre', e.target.value)}
-          >
-            <option value="All">All Centres</option>
-            {centres.map((centre) => (
-              <option key={centre} value={centre}>
-                {centre}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="filter-group">
           <label htmlFor="district-filter">District</label>
           <select
             id="district-filter"
@@ -112,7 +96,7 @@ const FilterPanel = ({ filters, onFilterChange, centres, states, districts, cour
 
         <button
           className="reset-btn"
-          onClick={() => onFilterChange({ status: 'Certified', centre: 'All', state: 'All', district: 'All', course: 'All', category: 'All' })}
+          onClick={() => onFilterChange({ status: 'Registered', centre: 'All', state: 'All', district: 'All', course: 'All', category: 'All' })}
         >
           Reset Filters
         </button>
