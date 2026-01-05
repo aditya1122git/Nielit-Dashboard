@@ -1,7 +1,7 @@
 /**
  * NIELIT SDUY Student Enrollment Data
  * Auto-generated from: phase CSV files (preferred) or SDUY MPR November 2025 revised 09-12-2025.xlsx (fallback)
- * Generated on: 2026-01-05T11:19:27.522Z
+ * Generated on: 2026-01-05T11:29:05.250Z
  * 
  * DATA CLEANING LOGIC:
  * ====================
@@ -21,7 +21,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Govt Polytechnic/ITI/NIELIT Own centre",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 36
@@ -101,7 +101,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 18
@@ -151,7 +151,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Jagatsinghpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 25
@@ -201,7 +201,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Balasore",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 32
@@ -241,7 +241,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Ganjam",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 101
@@ -351,7 +351,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Naupada",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 31
@@ -401,7 +401,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Simdega",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 24
@@ -431,7 +431,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Birbhum",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 67
@@ -501,7 +501,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Purulia",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 29
@@ -571,7 +571,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Howrah",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 134
@@ -631,7 +631,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Uttar Dinajpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 17
@@ -671,7 +671,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Gaya",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 68
@@ -741,7 +741,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Rohtas",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 96
@@ -811,7 +811,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Lakhisarai",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 33
@@ -861,7 +861,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Purnea",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Certified",
     "student_count": 108
@@ -911,7 +911,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Govt Polytechnic/ITI/NIELIT Own centre",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 59
@@ -991,7 +991,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 71
@@ -1111,7 +1111,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Jagatsinghpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 29
@@ -1161,7 +1161,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Balasore",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 36
@@ -1211,7 +1211,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Ganjam",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 101
@@ -1331,7 +1331,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Naupada",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 38
@@ -1381,7 +1381,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Seraikela Kharsawan",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 33
@@ -1451,7 +1451,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Simdega",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 160
@@ -1541,7 +1541,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Deoghar",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 27
@@ -1611,7 +1611,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Birbhum",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 67
@@ -1681,7 +1681,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Purulia",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 31
@@ -1751,7 +1751,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Howrah",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 155
@@ -1811,7 +1811,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Uttar Dinajpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 54
@@ -1871,7 +1871,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Gaya",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 123
@@ -1941,7 +1941,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Rohtas",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 113
@@ -2011,7 +2011,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Lakhisarai",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 60
@@ -2061,7 +2061,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Purnea",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Trained",
     "student_count": 108
@@ -2111,7 +2111,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Govt Polytechnic/ITI/NIELIT Own centre",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 59
@@ -2191,7 +2191,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Khordha",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 122
@@ -2361,7 +2361,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Jagatsinghpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 73
@@ -2441,7 +2441,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Balasore",
     "training_org": "Govt Polytechnic/ITI/NIELIT Own centre",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 10
@@ -2511,7 +2511,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Balasore",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 66
@@ -2631,7 +2631,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Ganjam",
     "training_org": "Govt Polytechnic/ITI",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 25
@@ -2671,7 +2671,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Ganjam",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 286
@@ -2841,7 +2841,7 @@ export const enrollmentData = [
     "state": "Odisha",
     "district": "Naupada",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 70
@@ -2931,7 +2931,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Seraikela Kharsawan",
     "training_org": "Govt Polytechnic/ITI",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 21
@@ -2971,7 +2971,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Seraikela Kharsawan",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 80
@@ -3091,7 +3091,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Simdega",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 210
@@ -3181,7 +3181,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Deoghar",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 78
@@ -3251,7 +3251,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Koderma",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 32
@@ -3301,7 +3301,7 @@ export const enrollmentData = [
     "state": "Jharkhand",
     "district": "Chatra",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 144
@@ -3381,7 +3381,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Birbhum",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 227
@@ -3501,7 +3501,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Purulia",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 368
@@ -3631,7 +3631,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Howrah",
     "training_org": "Govt Polytechnic/ITI",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 18
@@ -3681,7 +3681,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Howrah",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 348
@@ -3851,7 +3851,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Maldah",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 118
@@ -3931,7 +3931,7 @@ export const enrollmentData = [
     "state": "West Bengal",
     "district": "Uttar Dinajpur",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 259
@@ -4041,7 +4041,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Gaya",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 196
@@ -4131,7 +4131,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Rohtas",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 185
@@ -4251,7 +4251,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Lakhisarai",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 207
@@ -4351,7 +4351,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Motihari",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 118
@@ -4451,7 +4451,7 @@ export const enrollmentData = [
     "state": "Bihar",
     "district": "Purnea",
     "training_org": "Training Partner",
-    "course": "__ALL_COURSES__",
+    "course": "",
     "category": "Female",
     "status": "Registered",
     "student_count": 166

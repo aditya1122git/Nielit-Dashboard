@@ -134,6 +134,7 @@ export const aggregateByCourse = (data) => {
   const courseMap = new Map();
   
   data.forEach(item => {
+    if (!item.course) return;
     const current = courseMap.get(item.course) || 0;
     courseMap.set(item.course, current + toNumber(item.student_count));
   });

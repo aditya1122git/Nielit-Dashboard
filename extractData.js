@@ -21,8 +21,7 @@ const excelFilePath = join(__dirname, 'public', 'SDUY MPR November 2025  revised
 const phasesToProcess = ['Registered', 'Undergoing', 'Trained', 'Certified'];
 
 // When phases are provided as an Excel sheet, Female is an overall field (not per-course).
-// We represent it as a dedicated Female-only row using a sentinel course.
-const FEMALE_COURSE_SENTINEL = '__ALL_COURSES__';
+// We represent it as a dedicated Female-only row with an empty course.
 
 const toInt = (value) => {
   if (value === null || value === undefined) return 0;
@@ -137,7 +136,7 @@ const parsePhaseXlsxRows = (xlsxPath) => {
         District: currentDistrict,
         Centre: currentCentre,
         TrainingOrg: trainingOrgCell,
-        Course: FEMALE_COURSE_SENTINEL,
+        Course: '',
         SC: 0,
         ST: 0,
         EWS: 0,
@@ -186,7 +185,8 @@ const writePhaseCsvFromXlsxRows = (rows, outputPath, phaseCategory) => {
     const total = toInt(row.Total);
     const female = toInt(row.Female);
 
-    if (!state || !district || !centre || !course) continue;
+    if (!state || !district || !centre) continue;
+    if (!course && female <= 0) continue;
     if (sc <= 0 && st <= 0 && ews <= 0 && total <= 0 && female <= 0) continue;
 
     const key = [state, district, centre, course].join('||');
@@ -290,7 +290,8 @@ const tryReadCsvData = () => {
       const femaleCount = toInt(row.Female ?? row.female);
       const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
 
-      if (!centre || !state || !district || !course) continue;
+      if (!centre || !state || !district) continue;
+      if (!course && femaleCount <= 0) continue;
       if (totalCount <= 0 && femaleCount <= 0) continue;
 
       const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
@@ -384,7 +385,8 @@ const tryReadCsvData = () => {
       const femaleCount = toInt(row.Female ?? row.female);
       const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
 
-      if (!centre || !state || !district || !course) continue;
+      if (!centre || !state || !district) continue;
+      if (!course && femaleCount <= 0) continue;
       if (totalCount <= 0 && femaleCount <= 0) continue;
 
       const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
@@ -478,7 +480,8 @@ const tryReadCsvData = () => {
       const femaleCount = toInt(row.Female ?? row.female);
       const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
 
-      if (!centre || !state || !district || !course) continue;
+      if (!centre || !state || !district) continue;
+      if (!course && femaleCount <= 0) continue;
       if (totalCount <= 0 && femaleCount <= 0) continue;
 
       const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
@@ -589,7 +592,8 @@ const tryReadCsvData = () => {
       const femaleCount = toInt(row.Female ?? row.female);
       const genCount = Math.max(0, totalCount - scCount - stCount - ewsCount);
 
-      if (!centre || !state || !district || !course) continue;
+      if (!centre || !state || !district) continue;
+      if (!course && femaleCount <= 0) continue;
       if (totalCount <= 0 && femaleCount <= 0) continue;
 
       const trainingOrg = normalizeText(row.TrainingOrg ?? row.training_org ?? row['Training Org'] ?? '') || 'Total';
@@ -677,7 +681,10 @@ const dedupeAndSum = (rows) => {
     const status = normalizeText(raw.status);
     const studentCount = toInt(raw.student_count);
 
-    if (!centre || !state || !district || !course || !category || !status) continue;
+    const categoryLower = String(category ?? '').toLowerCase();
+
+    if (!centre || !state || !district || !category || !status) continue;
+    if (!course && categoryLower !== 'female') continue;
     if (studentCount <= 0) continue;
 
     const key = [status, centre, state, district, trainingOrg, course, category].join('||');

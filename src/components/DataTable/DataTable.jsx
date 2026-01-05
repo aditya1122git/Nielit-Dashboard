@@ -93,7 +93,9 @@ const DataTable = ({ data }) => {
                   <td>{row.district}</td>
                   <td>{row.centre}</td>
                   <td>
-                    <span className="course-badge">{row.course}</span>
+                    <span className="course-badge">
+                      {row.course === '__ALL_COURSES__' || !row.course ? '—' : row.course}
+                    </span>
                   </td>
                   <td>
                     <span className={`category-badge category-${String(row.category ?? '').toLowerCase()}`}>

@@ -1,22 +1,22 @@
 State,District,Centre,Category,Course,SC,ST,EWS,Total,Female
-Odisha,Balasore,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,76
+Odisha,Balasore,NIELIT Bhubaneswar,Registered,,0,0,0,0,76
 Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,46,13,1,60,0
 Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),24,6,0,30,0
 Odisha,Balasore,NIELIT Bhubaneswar,Registered,Certified Web Developer,20,4,1,25,0
 Odisha,Balasore,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Things (IoT),14,13,3,30,0
 Odisha,Balasore,NIELIT Bhubaneswar,Registered,O Level (IT),73,12,5,90,0
-Odisha,Ganjam,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,311
+Odisha,Ganjam,NIELIT Bhubaneswar,Registered,,0,0,0,0,311
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,76,44,0,120,0
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),136,54,16,206,0
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Certified Web Developer,22,5,3,30,0
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Things (IoT),21,7,2,30,0
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,O Level (IT),44,35,11,90,0
 Odisha,Ganjam,NIELIT Bhubaneswar,Registered,Product Assembly Assistant (Solar-LED),72,18,0,90,0
-Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,73
+Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,,0,0,0,0,73
 Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,59,0,1,60,0
 Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),54,4,2,60,0
 Odisha,Jagatsinghpur,NIELIT Bhubaneswar,Registered,O Level (IT),29,0,1,30,0
-Odisha,Khordha,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,181
+Odisha,Khordha,NIELIT Bhubaneswar,Registered,,0,0,0,0,181
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,20,0,2,22,0
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),12,48,1,61,0
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,Certified Web Developer,23,37,0,60,0
@@ -25,18 +25,18 @@ Odisha,Khordha,NIELIT Bhubaneswar,Registered,Foundation course in Internet of Th
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,Foundation course in Machine Learning using Python,18,9,3,30,0
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,O Level (IT),45,45,0,90,0
 Odisha,Khordha,NIELIT Bhubaneswar,Registered,Product Assembly Assistant (Solar-LED),21,8,1,30,0
-Odisha,Naupada,NIELIT Bhubaneswar,Registered,__ALL_COURSES__,0,0,0,0,70
+Odisha,Naupada,NIELIT Bhubaneswar,Registered,,0,0,0,0,70
 Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Computer Application Accounting and Publishing Assistant,19,11,0,30,0
 Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Data Entry and Office Assistant (Upskilling),17,13,0,30,0
 Odisha,Naupada,NIELIT Bhubaneswar,Registered,Certified Web Developer,7,23,0,30,0
 Odisha,Naupada,NIELIT Bhubaneswar,Registered,O Level (IT),15,15,0,30,0
-West Bengal,Birbhum,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,227
+West Bengal,Birbhum,NIELIT Kolkata,Registered,,0,0,0,0,227
 West Bengal,Birbhum,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,121,14,11,146,0
 West Bengal,Birbhum,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),283,35,87,405,0
 West Bengal,Birbhum,NIELIT Kolkata,Registered,Foundation course in Information Security,20,0,0,20,0
 West Bengal,Birbhum,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,20,0,0,20,0
 West Bengal,Birbhum,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),149,7,34,190,0
-West Bengal,Howrah,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,366
+West Bengal,Howrah,NIELIT Kolkata,Registered,,0,0,0,0,366
 West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,156,0,23,179,0
 West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),202,22,93,317,0
 West Bengal,Howrah,NIELIT Kolkata,Registered,Certified Web Developer,38,0,6,44,0
@@ -45,63 +45,63 @@ West Bengal,Howrah,NIELIT Kolkata,Registered,Foundation course in Internet of Th
 West Bengal,Howrah,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,80,0,11,91,0
 West Bengal,Howrah,NIELIT Kolkata,Registered,O Level (IT),29,1,0,30,0
 West Bengal,Howrah,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),20,0,169,189,0
-West Bengal,Maldah,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,118
+West Bengal,Maldah,NIELIT Kolkata,Registered,,0,0,0,0,118
 West Bengal,Maldah,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,133,9,0,142,0
 West Bengal,Maldah,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),200,5,0,205,0
 West Bengal,Maldah,NIELIT Kolkata,Registered,Foundation course in Information Security,35,0,0,35,0
 West Bengal,Maldah,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,60,0,0,60,0
 West Bengal,Maldah,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),34,0,0,34,0
-West Bengal,Purulia,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,368
+West Bengal,Purulia,NIELIT Kolkata,Registered,,0,0,0,0,368
 West Bengal,Purulia,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,53,50,66,169,0
 West Bengal,Purulia,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),160,94,52,306,0
 West Bengal,Purulia,NIELIT Kolkata,Registered,Foundation course in Information Security,83,8,44,135,0
 West Bengal,Purulia,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),124,21,30,175,0
-West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,__ALL_COURSES__,0,0,0,0,259
+West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,,0,0,0,0,259
 West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Certified Computer Application Accounting and Publishing Assistant,137,32,41,210,0
 West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Certified Data Entry and Office Assistant (Upskilling),90,14,0,104,0
 West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Foundation course in Information Security,57,0,0,57,0
 West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Foundation course in Machine Learning using Python,10,0,0,10,0
 West Bengal,Uttar Dinajpur,NIELIT Kolkata,Registered,Product Assembly Assistant (Solar-LED),95,16,18,129,0
-Bihar,Gaya,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,196
+Bihar,Gaya,NIELIT Patna,Registered,,0,0,0,0,196
 Bihar,Gaya,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,112,0,19,131,0
 Bihar,Gaya,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),197,1,78,276,0
 Bihar,Gaya,NIELIT Patna,Registered,Certified Web Developer,70,1,17,88,0
-Bihar,Lakhisarai,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,207
+Bihar,Lakhisarai,NIELIT Patna,Registered,,0,0,0,0,207
 Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,150,0,49,199,0
 Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),134,0,59,193,0
 Bihar,Lakhisarai,NIELIT Patna,Registered,Certified Web Developer,24,0,6,30,0
 Bihar,Lakhisarai,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),40,10,10,60,0
-Bihar,Motihari,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,118
+Bihar,Motihari,NIELIT Patna,Registered,,0,0,0,0,118
 Bihar,Motihari,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,42,0,18,60,0
 Bihar,Motihari,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),42,0,18,60,0
 Bihar,Motihari,NIELIT Patna,Registered,Certified Web Developer,42,0,18,60,0
 Bihar,Motihari,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),200,10,10,220,0
-Bihar,Purnea,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,166
+Bihar,Purnea,NIELIT Patna,Registered,,0,0,0,0,166
 Bihar,Purnea,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,76,0,23,99,0
 Bihar,Purnea,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),93,0,27,120,0
 Bihar,Purnea,NIELIT Patna,Registered,Certified Web Developer,42,0,18,60,0
-Bihar,Rohtas,NIELIT Patna,Registered,__ALL_COURSES__,0,0,0,0,185
+Bihar,Rohtas,NIELIT Patna,Registered,,0,0,0,0,185
 Bihar,Rohtas,NIELIT Patna,Registered,Certified Computer Application Accounting and Publishing Assistant,124,1,22,147,0
 Bihar,Rohtas,NIELIT Patna,Registered,Certified Data Entry and Office Assistant (Upskilling),106,1,20,127,0
 Bihar,Rohtas,NIELIT Patna,Registered,Certified Web Developer,24,0,6,30,0
 Bihar,Rohtas,NIELIT Patna,Registered,Product Assembly Assistant (Solar-LED),68,12,10,90,0
-Jharkhand,Chatra,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,144
+Jharkhand,Chatra,NIELIT Ranchi,Registered,,0,0,0,0,144
 Jharkhand,Chatra,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,75,45,0,120,0
 Jharkhand,Chatra,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),72,47,1,120,0
 Jharkhand,Chatra,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),35,25,0,60,0
-Jharkhand,Deoghar,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,78
+Jharkhand,Deoghar,NIELIT Ranchi,Registered,,0,0,0,0,78
 Jharkhand,Deoghar,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,51,9,0,60,0
 Jharkhand,Deoghar,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),53,7,0,60,0
 Jharkhand,Deoghar,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),40,20,0,60,0
-Jharkhand,Koderma,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,32
+Jharkhand,Koderma,NIELIT Ranchi,Registered,,0,0,0,0,32
 Jharkhand,Koderma,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,56,4,0,60,0
 Jharkhand,Koderma,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),73,5,0,78,0
-Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,101
+Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,,0,0,0,0,101
 Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,9,51,0,60,0
 Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),17,43,0,60,0
 Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Foundation course in Machine Learning using Python,5,0,0,5,0
 Jharkhand,Seraikela Kharsawan,NIELIT Ranchi,Registered,Product Assembly Assistant (Solar-LED),7,39,5,51,0
-Jharkhand,Simdega,NIELIT Ranchi,Registered,__ALL_COURSES__,0,0,0,0,210
+Jharkhand,Simdega,NIELIT Ranchi,Registered,,0,0,0,0,210
 Jharkhand,Simdega,NIELIT Ranchi,Registered,Certified Computer Application Accounting and Publishing Assistant,9,111,0,120,0
 Jharkhand,Simdega,NIELIT Ranchi,Registered,Certified Data Entry and Office Assistant (Upskilling),6,114,0,120,0
 Jharkhand,Simdega,NIELIT Ranchi,Registered,Foundation course in Internet of Things (IoT),3,7,0,10,0
